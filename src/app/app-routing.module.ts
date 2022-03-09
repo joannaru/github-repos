@@ -11,7 +11,8 @@ const routes: Routes = [
     path:'details/:id',
     loadChildren: () =>  
       import('./modules/details/details.module').then(m => m.DetailsModule)
-  }
+  },
+  { path: '',   redirectTo: '/list', pathMatch: 'full' }
 ];
 
 @NgModule({
